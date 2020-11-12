@@ -1,0 +1,7 @@
+python3 -m venv ./venv
+source venv/bin/activate
+python3 manage.py makemigrations 
+python3 manage.py migrate
+python3 manage.py runserver
+python3 manage.py createsuperuser
+udo docker run -d --name postgres -v my_dbdata:/var/lib/postgresql/data -p 54320:5432 postgres:11
